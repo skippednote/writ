@@ -1,0 +1,13 @@
+<template name="notes">
+    <h1>Hello</h1>
+    <ul>
+        {{#each notes}}
+            <li>
+                {{title}}
+                ({{format_date date}})
+                <a href="{{pathFor 'preview'}}">Link</a>
+                <a href="{{pathFor 'edit'}}">Edit</a>
+            </li>
+        {{/each}}
+    </ul>
+</template>

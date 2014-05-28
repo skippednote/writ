@@ -1,0 +1,22 @@
+<template name="writedown">
+    <div class="markdown-area">
+
+        <button class="post-note">Save</button>
+        <input type="checkbox" id="private">
+        <input type="text" id="title" placeholder="Title">
+        <section class="editor">
+            <i class="fa fa-arrows-alt fullscreen"></i>
+            <div class="pane-container">
+                <textarea id="content" name="" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+
+        <section class="preview parsed">
+            <i class="fa fa-arrows-alt fullscreen"></i>
+            <div class="pane-container">
+                {{#markdown}}{{session 'content'}}{{/markdown}}
+            </div>
+        </section>
+
+    </div>
+</template>

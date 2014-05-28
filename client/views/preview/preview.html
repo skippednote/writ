@@ -1,0 +1,8 @@
+<template name="preview">
+    <a href="{{pathFor 'notes'}}">Notes</a>
+    <a href="{{pathFor 'edit'}}">Edit</a>
+    <h1>{{#markdown}}{{title}}{{/markdown}}</h1>
+    <h1>{{public}}</h1>
+    <span class="date">{{format_date date}}</span>
+    {{#markdown}}{{note}}{{/markdown}}
+</template>

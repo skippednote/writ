@@ -1,0 +1,8 @@
+<template name="login">
+    {{#if currentUser}}
+        {{currentUser.profile.name}}
+        <button class="sign-out">Sign Out</button>
+    {{else}}
+        <button class="sign-in">Sign In</button>
+    {{/if}}
+</template>

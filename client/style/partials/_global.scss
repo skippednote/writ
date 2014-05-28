@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font: 1em/1.5 'Lato', sans-serif;
+}
+
+a {
+    color: #39f;
+}
+
+.markdown-area {
+    clear: both;
+    overflow: hidden;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.parsed,
+.editor {
+    padding: 1em;
+    width: 50%;
+    float: left;
+    height: 100%;
+    font-size: 1.25rem;
+}
+
+.pane-container {
+    height: 100%;
+    padding: 1em 0;
+    overflow: scroll;
+}
+
+.fa.fullscreen {
+  display: block;
+  color: #AFAFAF;
+  padding: 1rem 0;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.preview {
+  .fullscreen {
+    text-align: right;
+  }
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-family: 'Source Code Pro', courier;
+    border: none;
+    outline: none;
+    color: #333;
+    height: 100%;
+    resize: none;
+}
+
+[class^="fullscreen-"] {
+    .pane-container {
+        padding: 2rem;
+    }
+}
+
+
+.markdown-area.fullscreen-editor {
+  .editor {
+    width: 100%;
+    float: none;
+    .pane-container {
+        max-width: 45rem;
+        margin: auto;
+    }
+  }
+
+  .preview {
+    display: none;
+  }
+}
+
+.markdown-area.fullscreen-preview {
+  .preview {
+    width: 100%;
+    float: none;
+    .pane-container {
+        max-width: 45rem;
+        margin: auto;
+    }
+  }
+
+  .editor {
+    display: none;
+  }
+}
