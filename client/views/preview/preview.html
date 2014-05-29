@@ -1,8 +1,17 @@
 <template name="preview">
-    <a href="{{pathFor 'notes'}}">Notes</a>
-    <a href="{{pathFor 'edit'}}">Edit</a>
-    <h1>{{#markdown}}{{title}}{{/markdown}}</h1>
-    <h1>{{public}}</h1>
-    <span class="date">{{format_date date}}</span>
-    {{#markdown}}{{note}}{{/markdown}}
+    <div class="preview-page animated fadeInUp">
+        <div class="settings">
+            <div class="list-note">
+                <a href="{{pathFor 'notes'}}"><i class="fa fa-list"></i>Notes</a>
+            </div>
+            <div class="edit-note">
+                <a href="{{pathFor 'edit'}}"><i class="fa fa-pencil"></i>Edit</a>
+            </div>
+        </div>
+        <h1 class=note-title>{{#markdown}}{{title}}{{/markdown}}</h1>
+        <span class="date">{{format_date date updated}}</span>
+        <div class="note-content">
+            {{#markdown}}{{note}}{{/markdown}}
+        </div>
+    </div>
 </template>

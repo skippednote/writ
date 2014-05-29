@@ -5,7 +5,9 @@
       "iron-router": {},
       "medium-editor-updated": {},
       "sass": {},
-      "moment": {}
+      "moment": {},
+      "flash-messages": {},
+      "iron-router-progress": {}
     },
     "packages": {
       "iron-router": {
@@ -27,6 +29,16 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.6.0",
         "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "flash-messages": {
+        "git": "https://github.com/camilosw/flash-messages.git",
+        "tag": "v0.2.4",
+        "commit": "8e7d09e7b7bd61ab10aaad01371dcecef2e9f797"
+      },
+      "iron-router-progress": {
+        "git": "https://github.com/Multiply/iron-router-progress.git",
+        "tag": "v0.4.0",
+        "commit": "02f78bdaca4c13d59f548d5a0ce83408c34b56d1"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

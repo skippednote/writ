@@ -1,3 +1,34 @@
 <template name="home">
-    <h1>WriteDown</h1>
+        <div class="home-page logged-in animated fadeInUpBig">
+            <div class="banner">
+                <h1>WriteDown</h1>
+                <p>A Markdown app for mere mortals.</p>
+                <div class="image-wrapper">
+                {{#if currentUser}}
+                    <div class="settings actions-btn">
+                        <a class=post-note href="{{pathFor 'writedown'}}"><i class="fa fa-file-o"></i>New Note</a>
+                        <a class=list-note href="{{pathFor 'notes'}}"><i class="fa fa-list"></i>View Notes</a>
+                    </div>
+                {{/if}}
+                    <img class="" src="/1.png" alt="">
+                </div>
+            </div>
+            <div class="site-info">
+                <div class="author">
+                    <h2>Author</h2>
+                    <div class="author-image">
+                        <img src="/bassam.jpg" alt="">
+                    </div>
+                    <div class="author-bio">
+                        <a href="http://bassam.co">Bassam</a> is a 22 year old Frontend Developer from Srinagar, Kashmir working at Axelerant. He spends most of the time working on medium to large scale websites built on top of Drupal. Passionate about client-side technologies and tooling. Lives by the Unix philosphy.
+                    </div>
+                </div>
+                <div class="colophon">
+                    <h2>Colophon</h2>
+                    <div class="colophon-bio">
+                        WriteDown is built on top of <a href="http://meteor.com">Meteor.js</a>, which provided live binding and rendering of Markdown text. Sass is used for styling, data is being stored in MongoDb and authentication is done using Twitter OAuth.
+                    </div>
+                </div>
+            </div>
+        </div>
 </template>

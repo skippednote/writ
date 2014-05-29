@@ -1,0 +1,42 @@
+.masthead {
+    background-color: white;
+    padding: 1.125rem;
+    clear: both;
+    overflow: hidden;
+}
+.home-link {
+    float: left;
+    line-height: 40px;
+}
+
+.menu-btn {
+    font-size: 1.5rem;
+}
+
+.login {
+    text-align: right;
+    float: right;
+
+    .logged-in-user {
+        display: inline-block;
+    }
+}
+
+.btn {
+    border: 1px solid $brand;
+    background: white;
+    color: $brand;
+    padding: .25em 1em;
+    border-raduis: 4px;
+    -webkit-transition: all .25s ease-in-out;
+
+    &:hover {
+        background: $brand;
+        color: white;
+    }
+
+    .fa {
+        font-size: 1.125rem;
+        margin-right: 10px;
+    }
+}

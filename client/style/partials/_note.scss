@@ -1,0 +1,74 @@
+.notes {
+    position: relative;
+    height: 100%;
+
+    .settings {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+
+    .post-note {
+        text-align: center;
+        display: inline-block;
+        float: none;
+        text-decoration: none;
+    }
+}
+
+.notes-listing {
+    list-style: none;
+    width: 60%;
+    min-height: 100%;
+    background-color: #FDFDFD;
+    margin: auto;
+    padding: 4rem 1rem;
+}
+
+.note-item {
+    margin-bottom: 2rem;
+    clear: both;
+    overflow: hidden;
+    align-items: center;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 1rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.note-meta {
+    float: left;
+    max-width: 80%;
+}
+
+.note-date {
+    font-size: .875rem;
+    opacity: .75;
+}
+
+.note-actions {
+    min-width: 60px;
+    float: right;
+
+
+    .fa {
+        font-size: 1.25rem;
+        padding-left: .5rem;
+    }
+}
+
+.note-title {
+    margin: 0;
+    line-height: 1.2;
+
+    a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+            color: $brand;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@media screen and (max-width: 768px) {
+    .markdown-area {
+        &.edit-page {
+            .settings {
+                .note-title {
+                    font-size: 1rem;
+                    width: 70%;
+                }
+            }
+        }
+        .settings {
+            .note-title {
+                font-size: 1rem;
+                width: 85%;
+            }
+
+            .new-note,
+            .post-note,
+            .delete-note,
+            .edit-note {
+                width: auto;
+                max-width: 15%;
+
+                .fa {
+                    display: block
+
+                }
+
+            }
+            .delete-note {
+                &:hover {
+                    background: #F35353;
+                }
+            }
+            // .post-note,
+            // .edit-note {
+            //     &:hover {
+            //         background: #FC930D;
+            //     }
+            // }
+
+        }
+
+        &.fullscreen-preview,
+        &.fullscreen-editor {
+            section {
+                width: 100% !important;
+            }
+        }
+    }
+    .preview-page,
+    .notes-listing {
+        width: 100%;
+
+        .note-title {
+            font-size: 1.125rem;
+        }
+    }
+
+    .preview-page {
+        .settings {
+            div {
+                .fa {
+                    display: block;
+                }
+            }
+        }
+    }
+    .home-page {
+        max-width: 100%;
+
+        .colophon,
+        .author {
+            width: 100%;
+            padding: 0 1rem;
+        }
+
+        .author {
+            .author-image {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+
+            .author-bio {
+                width: 100%;
+            }
+        }
+    }
+}

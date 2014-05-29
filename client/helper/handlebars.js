@@ -1,3 +1,7 @@
-Handlebars.registerHelper('format_date', function(input) {
-    return moment(input).fromNow();
+Handlebars.registerHelper('format_date', function(newDate, updatedDate) {
+    if ( newDate > updatedDate) {
+        return moment(newDate).fromNow();
+    } else {
+        return moment(updatedDate).fromNow();
+    }
 });

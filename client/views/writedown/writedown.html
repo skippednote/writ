@@ -1,17 +1,19 @@
 <template name="writedown">
-    <div class="markdown-area">
+    <div class="editer markdown-area animated fadeInUp">
 
-        <button class="post-note">Save</button>
-        <input type="checkbox" id="private">
-        <input type="text" id="title" placeholder="Title">
-        <section class="editor">
+        <div class="settings">
+            <input type="text" class="note-title" id="title" placeholder="Title" required>
+            <button type="submit" class="post-note"><i class="fa fa-floppy-o"></i>Save</button>
+            <!-- <input type="checkbox" id="private"> -->
+        </div>
+        <section class="editor animated fadeInLeft">
             <i class="fa fa-arrows-alt fullscreen"></i>
             <div class="pane-container">
-                <textarea id="content" name="" cols="30" rows="10"></textarea>
+                <textarea required id="content" name="" cols="30" rows="10"></textarea>
             </div>
         </section>
 
-        <section class="preview parsed">
+        <section class="preview parsed animated fadeInRight">
             <i class="fa fa-arrows-alt fullscreen"></i>
             <div class="pane-container">
                 {{#markdown}}{{session 'content'}}{{/markdown}}

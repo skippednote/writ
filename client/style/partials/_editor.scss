@@ -1,0 +1,150 @@
+#content {
+    background: #F7F7F7;
+}
+
+section{
+    background-color: inherit;
+
+    &:hover {
+        background-color: #FDFDFD;
+
+        .fa.fullscreen,
+        #content {
+            background-color: #FDFDFD;;
+        }
+    }
+}
+
+@-webkit-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+@-moz-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+.settings {
+    clear: both;
+    overflow: hidden;
+
+    .note-title {
+        border: none;
+        padding: .25em 1em;
+        line-height: 40px;
+        width: 90%;
+        float: left;
+        background: #FDFDFD;
+        font-size: 1.25rem;
+        height: 50px;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+
+    .new-note,
+    .list-note,
+    .delete-note,
+    .edit-note,
+    .post-note {
+        float: left;
+        text-transform: uppercase;
+        padding: .25em 1em;
+        width: 10%;
+        line-height: 40px;
+        height: 50px;
+        background:$brand;
+        color: white;
+        border: none;
+        position: relative;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        &:hover {
+            .fa {
+                display: block;
+            }
+        }
+
+        .fa {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            background: inherit;
+
+            &:before {
+                display: block;
+                line-height: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+        }
+    }
+    .delete-note {
+        background: #FF7373;
+
+        &:hover {
+            background: #F35353;
+        }
+    }
+    .list-note {
+        background: $brand;
+
+        &:hover {
+            background: #f8991e;
+        }
+    }
+    .edit-note {
+        background: #1F8DD6;
+
+        &:hover {
+            background: #1E71A8;
+        }
+    }
+    .post-note {
+        background: #59CF75;
+
+        &:hover {
+            background: #45B660;
+        }
+    }
+
+}
+
+.edit-page {
+    .note-title {
+        width: 80%;
+    }
+}
+
+.preview {
+    h1 {
+        margin-top: 0;
+        line-height: 1.1;
+    }
+}

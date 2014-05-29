@@ -1,0 +1,92 @@
+.home-page {
+    max-width: 60%;
+    margin: auto;
+    padding: 3rem 0;
+    height: 100%;
+
+    h1 {
+        margin: 0;
+        text-align: center;
+        line-height: 1;
+        font-size: 3rem;
+    }
+    p {
+        margin:0 0 3rem;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        position: relative;
+    }
+
+    .actions-btn {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        z-index: 5;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            float: none;
+            display: inline-block;
+            width: auto;
+        }
+    }
+
+    .colophon,
+    .author {
+        border-top: 1px solid #FFF;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08);
+        padding-top: 2rem;
+        width: 50%;
+        float: left;
+
+        h2 {
+            text-align: center;
+        }
+
+        .author-image {
+            float: left;
+            padding-right: 2rem;
+            width: 30%;
+        }
+
+        .author-bio {
+            float: right;
+            width: 70%;
+        }
+
+        img {
+            max-width: 120px;
+            border-radius: 100%;
+        }
+    }
+
+    .colophon {
+        padding-left: 2rem;
+    }
+    .site-info {
+        clear: both;
+        overflow: hidden;
+        padding-bottom: 2rem;
+    }
+}
+
+.home-page.logged-in {
+    .image-wrapper {
+        img {
+            -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            filter: blur(2px);
+        }
+
+        &:hover {
+            img {
+                -webkit-filter: blur(0);
+                -moz-filter: blur(0);
+                filter: blur(0);
+            }
+        }
+    }
+}

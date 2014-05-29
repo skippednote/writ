@@ -9,13 +9,18 @@ body {
 }
 
 a {
-    color: #39f;
+    color: $brand;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .markdown-area {
     clear: both;
-    overflow: hidden;
     height: 100%;
+}
+.editer {
+    overflow: hidden;
 }
 
 img {
@@ -25,36 +30,43 @@ img {
 
 .parsed,
 .editor {
-    padding: 1em;
     width: 50%;
     float: left;
     height: 100%;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    position: relative;
 }
 
 .pane-container {
     height: 100%;
-    padding: 1em 0;
     overflow: scroll;
 }
 
 .fa.fullscreen {
-  display: block;
-  color: #AFAFAF;
-  padding: 1rem 0;
+    display: block;
+    color: rgba(0, 0, 0, .125);
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    background: #F7F7F7;
 
-  &:hover {
-    color: black;
-  }
+    &:hover {
+        color: #111;;
+    }
 }
 
 .preview {
-  .fullscreen {
-    text-align: right;
-  }
+    .pane-container {
+        padding: 3rem 1rem;
+    }
+
+    .fullscreen {
+        text-align: right;
+    }
 }
 
 #content {
+    padding: 3rem 1rem;
     height: 100%;
     width: 100%;
     border: none;
@@ -72,33 +84,53 @@ img {
     }
 }
 
-
 .markdown-area.fullscreen-editor {
-  .editor {
-    width: 100%;
-    float: none;
-    .pane-container {
-        max-width: 45rem;
+    .editor {
+        float: none;
         margin: auto;
+        width: 60%;
     }
-  }
+    .preview {
+        display: none;
+    }
+}
+.markdown-area.fullscreen-preview {
+    .preview {
+        float: none;
+        margin: auto;
+        width: 60%;
+    }
 
-  .preview {
-    display: none;
-  }
+    .editor {
+        display: none;
+    }
 }
 
-.markdown-area.fullscreen-preview {
-  .preview {
+.alert {
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    position: absolute;
+    top: 0;
     width: 100%;
-    float: none;
-    .pane-container {
-        max-width: 45rem;
-        margin: auto;
-    }
-  }
+    margin: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
 
-  .editor {
-    display: none;
-  }
+    button {
+        display: none;
+    }
+
+    &.alert-info {
+        background: #1F8DD6;
+    }
+    &.alert-success {
+        background: #59CF75;
+    }
+    &.alert-warning {
+        background: #FF7373;
+    }
 }

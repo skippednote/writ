@@ -1,6 +1,59 @@
-.preview {
-    h1 {
-        margin-top: 0;
-        line-height: 1.1;
+.preview-page {
+    width: 60%;
+    min-height: 100%;
+    margin: auto;
+    background: #FDFDFD;
+    padding: 0 1rem 2rem;
+
+    .settings {
+        text-align: center;
+        font-size: 0;
+
+        & > div {
+            float: none;
+            display: inline-block;
+            font-size: 1rem;
+            min-width: 57px;
+        }
+
+        .edit-note {
+            .fa {
+                background: #1F8DD6;
+
+                &:hover {
+                    background: #1E71A8;
+                }
+            }
+        }
+        .list-note {
+            .fa {
+                background: $brand;
+
+                &:hover {
+                    background: #f8991e;
+                }
+            }
+        }
     }
+
+    .note-title {
+        &,
+        & p {
+            margin-bottom: 0;
+        }
+    }
+
+    .date {
+        opacity: .5;
+    }
+
+    .note-content {
+        padding-top: 2rem;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
 }
+

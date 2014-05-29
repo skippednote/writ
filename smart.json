@@ -3,6 +3,8 @@
     "iron-router": {},
     "medium-editor-updated": {},
     "sass": {},
-    "moment": {}
+    "moment": {},
+    "flash-messages": {},
+    "iron-router-progress": {}
   }
 }

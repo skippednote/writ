@@ -28,14 +28,25 @@ Template.writedown.events({
         e.preventDefault();
 
         var noteEntry = {
-            title  : $(e.target).parent().find('#title').val(),
-            note   : $(e.target).parent().find('#content').val(),
-            date   : Date.now(),
-            public : $(e.target).parent().find('#private:checked').length,
-            author : Meteor.userId()
+            title: $(e.target).parent().parent().find('#title').val(),
+            note: $('#content').val(),
+            date: Date.now(),
+            updated: 0,
+            public: $(e.target).parent().parent().find('#private:checked').length,
+            author: Meteor.userId(),
+            noteCall: function() {
+                return this.note;
+            }
         };
+
+        console.log(noteEntry.noteCall());
+        console.log(noteEntry.title);
+        console.log(noteEntry.author);
+        console.log(noteEntry.date);
+        console.log(noteEntry.note);
 
         Notes.insert(noteEntry);
         Router.go('notes');
+        FlashMessages.sendSuccess("Post has been created.");
     }
 });

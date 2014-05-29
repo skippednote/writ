@@ -1,13 +1,21 @@
 <template name="notes">
-    <h1>Hello</h1>
-    <ul>
-        {{#each notes}}
-            <li>
-                {{title}}
-                ({{format_date date}})
-                <a href="{{pathFor 'preview'}}">Link</a>
-                <a href="{{pathFor 'edit'}}">Edit</a>
-            </li>
-        {{/each}}
-    </ul>
+    <div class="notes markdown-area animated fadeInUp">
+        <div class="settings">
+            <a class=post-note href="{{pathFor 'writedown'}}"><i class="fa fa-file-o"></i>New Post</a>
+        </div>
+        <ul class="notes-listing">
+            {{#each notes}}
+                <li class="note-item">
+                    <span class="note-meta">
+                        <h2 class="note-title"><a href="{{pathFor 'preview'}}">{{title}}</a></h2>
+                        <span class="note-date">Posted {{format_date date updated}}</span>
+                    </span>
+                    <span class="note-actions">
+                        <span class="note-edit"><a href="{{pathFor 'edit'}}"><i class="fa fa-pencil"></i></a></span>
+                        <span><a class="note-delete" href="#"><i class="fa fa-trash-o"></i></a></span>
+                    </span>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 </template>

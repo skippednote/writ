@@ -1,9 +1,12 @@
 <template name="edit">
-    <div class="markdown-area">
+    <div class="editer markdown-area edit-page animated fadeInUp">
 
-        <button class="edit-note">Edit</button>
-        <input type="checkbox" id="private">
-        <input type="text" id="title" placeholder="Title" value="{{title}}">
+        <div class="settings">
+            <input type="text" class="note-title" id="title" placeholder="Title" value={{title}}>
+            <button class="delete-note"><i class="fa fa-trash-o"></i>Discard</button>
+            <button class="edit-note"><i class="fa fa-floppy-o"></i>Update</button>
+            <!-- <input type="checkbox" id="private"> -->
+        </div>
         <section class="editor">
             <i class="fa fa-arrows-alt fullscreen"></i>
             <div class="pane-container">

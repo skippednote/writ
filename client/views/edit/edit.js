@@ -37,11 +37,10 @@ Template.edit.events({
         var thisNoteId = this._id;
 
         var noteEntry = {
-            title: $(e.target).parent().find('#title').val(),
-            note: $(e.target).parent().find('#content').val(),
-            date: Date.now(),
-            public: $(e.target).parent().find('#private:checked').length,
-            author: Meteor.userId()
+            title  : $(e.target).parent().parent().find('#title').val(),
+            note: $('#content').val(),
+            updated: Date.now(),
+            public : $(e.target).parent().parent().find('#private:checked').length
         };
 
         Notes.update(thisNoteId, {$set: noteEntry}, function(err) {
@@ -49,7 +48,22 @@ Template.edit.events({
                 alert(err.reason);
             } else {
                 Router.go('preview', {_id: thisNoteId});
+                FlashMessages.sendInfo("Post has been updated.");
             }
         });
+    },
+    'click .delete-note': function(e) {
+        e.preventDefault();
+        if (confirm('Delete')) {
+            var id = this
+            Notes.remove(id._id, function(err) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    Router.go('notes');
+                    FlashMessages.sendWarning("Post has been deleted.");
+                }
+            })
+        }
     }
 });
