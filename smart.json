@@ -5,6 +5,7 @@
     "sass": {},
     "moment": {},
     "flash-messages": {},
-    "iron-router-progress": {}
+    "iron-router-progress": {},
+    "fast-render": {}
   }
 }
