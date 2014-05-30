@@ -1,4 +1,7 @@
 @media screen and (max-width: 768px) {
+    .alert {
+        max-width: 80%;
+    }
     .markdown-area {
         &.edit-page {
             .settings {
@@ -72,7 +75,7 @@
         .colophon,
         .author {
             width: 100%;
-            padding: 0 1rem;
+            padding: 0 1rem 1rem;
         }
 
         .author {

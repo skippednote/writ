@@ -39,6 +39,7 @@
         border-top: 1px solid #FFF;
         box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08);
         padding-top: 2rem;
+        padding-bottom: 1rem;
         width: 50%;
         float: left;
 
@@ -73,12 +74,12 @@
     }
 }
 
-.home-page.logged-in {
+.home-page {
     .image-wrapper {
-        img {
-            -webkit-filter: blur(2px);
-            -moz-filter: blur(2px);
-            filter: blur(2px);
+        img.loggedIn-image {
+            -webkit-filter: blur(1px);
+            -moz-filter: blur(1px);
+            filter: blur(1px);
         }
 
         &:hover {

@@ -9,8 +9,10 @@
                         <a class=post-note href="{{pathFor 'writedown'}}"><i class="fa fa-file-o"></i>New Note</a>
                         <a class=list-note href="{{pathFor 'notes'}}"><i class="fa fa-list"></i>View Notes</a>
                     </div>
+                    <img class="loggedIn-image" src="/1.png" alt="">
+                {{else}}
+                    <img class="loggedOut-image" src="/1.png" alt="">
                 {{/if}}
-                    <img class="" src="/1.png" alt="">
                 </div>
             </div>
             <div class="site-info">
