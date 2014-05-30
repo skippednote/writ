@@ -1,8 +1,7 @@
 .masthead {
     background-color: white;
     padding: 1.125rem;
-    clear: both;
-    overflow: hidden;
+    @extend .cf;
 }
 .home-link {
     float: left;

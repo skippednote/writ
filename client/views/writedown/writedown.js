@@ -31,7 +31,7 @@ Template.writedown.events({
             title: $(e.target).parent().parent().find('#title').val(),
             note: $('#content').val(),
             date: Date.now(),
-            updated: 0,
+            updated: Date.now(),
             public: $(e.target).parent().parent().find('#private:checked').length,
             author: Meteor.userId(),
             noteCall: function() {
