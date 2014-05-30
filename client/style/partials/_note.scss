@@ -58,9 +58,12 @@
     }
 }
 
-.note-title {
+.notes-listing .note-title {
     margin: 0;
     line-height: 1.2;
+    @media screen and (max-width: 768px) {
+        font-size: 1.25rem !important;
+    }
 
     a {
         display: block;
