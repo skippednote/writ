@@ -22,11 +22,12 @@
 }
 
 .btn {
+    font-size: 16px;
     border: 1px solid $brand;
+    font-family: lato, sans-serif;
     background: white;
     color: $brand;
     padding: .25em 1em;
-    border-raduis: 4px;
     -webkit-transition: all .25s ease-in-out;
 
     &:hover {

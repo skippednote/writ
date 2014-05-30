@@ -3,7 +3,7 @@
     min-height: 100%;
     margin: auto;
     background: #FDFDFD;
-    padding: 0 1rem 2rem;
+    padding: 0 3rem 2rem;
 
     .settings {
         text-align: center;
@@ -12,7 +12,7 @@
         & > div {
             float: none;
             display: inline-block;
-            font-size: 1rem;
+            font-size: 16px;
             min-width: 57px;
         }
 
@@ -49,10 +49,6 @@
 
     .note-content {
         padding-top: 2rem;
-
-        p {
-            margin-top: 0;
-        }
     }
 
 }

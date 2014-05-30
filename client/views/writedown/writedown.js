@@ -39,12 +39,6 @@ Template.writedown.events({
             }
         };
 
-        console.log(noteEntry.noteCall());
-        console.log(noteEntry.title);
-        console.log(noteEntry.author);
-        console.log(noteEntry.date);
-        console.log(noteEntry.note);
-
         Notes.insert(noteEntry);
         Router.go('notes');
         FlashMessages.sendSuccess("Post has been created.");

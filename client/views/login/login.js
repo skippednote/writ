@@ -6,9 +6,14 @@ Template.login.events({
     },
 
     'click .sign-in': function() {
-        Meteor.loginWithTwitter(function() {
-            Router.go('notes');
-            FlashMessages.sendSuccess("You have signed in.");
+        Meteor.loginWithTwitter(function(err) {
+            if (err) {
+                Router.go('home');
+                FlashMessages.sendWarning("Failed to login.");
+            } else {
+                Router.go('notes');
+                FlashMessages.sendSuccess("You have signed in.");
+            }
         });
     }
 });

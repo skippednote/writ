@@ -49,6 +49,13 @@
             section {
                 width: 100% !important;
             }
+
+            .preview {
+                .pane-container {
+                    padding: 3rem 1rem;
+                }
+            }
+
         }
     }
     .preview-page,
@@ -61,6 +68,11 @@
     }
 
     .preview-page {
+        padding: 0 1rem 2rem;
+
+        .note-content {
+            padding-top: 1rem;
+        }
         .settings {
             div {
                 .fa {

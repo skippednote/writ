@@ -14,7 +14,18 @@
 html,
 body {
     height: 100%;
-    font: 1em/1.5 'Lato', sans-serif;
+    font: 1.125em/1.5 'EB Garamond', sans-serif;
+}
+
+pre,
+code {
+    font-size: .75rem;
+    font-family: 'Source Code Pro', courier, sans-serif;
+}
+
+pre {
+    padding: 1rem;
+    background: #ECECEC;
 }
 
 a {
@@ -22,6 +33,18 @@ a {
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
+}
+
+blockquote {
+    font-style: italic;
+    background: #E9E9E9;
+    padding: .5rem;
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+        margin: .5rem 0;
+    }
 }
 
 .markdown-area {
@@ -58,6 +81,9 @@ img {
     position: absolute;
     width: 100%;
     background: #F7F7F7;
+    top: 0;
+    left: 0;
+    right: 0;
 
     &:hover {
         color: #111;;
@@ -79,12 +105,14 @@ img {
     height: 100%;
     width: 100%;
     border: none;
-    font-family: 'Source Code Pro', courier;
+    font-family: 'lato', courier;
     border: none;
     outline: none;
     color: #333;
     height: 100%;
     resize: none;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 [class^="fullscreen-"] {
@@ -108,6 +136,10 @@ img {
         float: none;
         margin: auto;
         width: 60%;
+
+        .pane-container {
+            padding: 3rem;
+        }
     }
 
     .editor {
