@@ -1,7 +1,7 @@
 <template name="home">
         <div class="home-page logged-in animated fadeInUpBig">
             <div class="banner">
-                <h1>WriteDown</h1>
+                <h1>Writ</h1>
                 <p>A Markdown app for mere mortals.</p>
                 <div class="image-wrapper">
                 {{#if currentUser}}
@@ -9,9 +9,9 @@
                         <a class=post-note href="{{pathFor 'writedown'}}"><i class="fa fa-file-o"></i>New Note</a>
                         <a class=list-note href="{{pathFor 'notes'}}"><i class="fa fa-list"></i>View Notes</a>
                     </div>
-                    <img class="loggedIn-image" src="/writedown.png" alt="">
+                    <img class="loggedIn-image" src="/writ.png" alt="Writ">
                 {{else}}
-                    <img class="loggedOut-image" src="/writedown.png" alt="">
+                    <img class="loggedOut-image" src="/writ.png" alt="Writ">
                 {{/if}}
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 <div class="colophon">
                     <h2>Colophon</h2>
                     <div class="colophon-bio">
-                        WriteDown is built on top of <a href="http://meteor.com">Meteor.js</a>, which provided live binding and rendering of Markdown text. Sass is used for styling, data is being stored in MongoDb and authentication is done using Twitter OAuth.
+                        Writ is built on top of <a href="http://meteor.com">Meteor.js</a>, which provided live binding and rendering of Markdown text. Sass is used for styling, data is being stored in MongoDb and authentication is done using Twitter OAuth.
                     </div>
                 </div>
             </div>
