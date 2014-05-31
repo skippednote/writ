@@ -14,13 +14,13 @@
 html,
 body {
     height: 100%;
-    font: 1.125em/1.5 'EB Garamond', sans-serif;
+    font: 1.125em/1.5 'Crimson Text', sans-serif;
 }
 
 pre,
 code {
     font-size: .75rem;
-    font-family: 'Source Code Pro', courier, sans-serif;
+    font-family: 'lato', courier, sans-serif;
 }
 
 pre {
@@ -204,6 +204,18 @@ img {
             width: 100%;
             color: white;
             text-shadow: 0 1px 2px #000;
+        }
+    }
+}
+
+.kern {
+    &:first-letter {
+        letter-spacing: -2px;
+    }
+
+    &.more {
+        &:first-letter {
+            letter-spacing: -8px;
         }
     }
 }

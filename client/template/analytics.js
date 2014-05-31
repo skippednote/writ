@@ -4,6 +4,6 @@ Template.analytics.created = function() {
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51512610-1', 'write.bassam.co');
+  ga('create', 'UA-51512610-1', 'writ.bassam.co');
   ga('send', 'pageview');
 };
