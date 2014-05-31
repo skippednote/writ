@@ -13,7 +13,11 @@
             float: none;
             display: inline-block;
             font-size: 16px;
-            min-width: 57px;
+            min-width: 80px;
+
+            @media screen and (max-width: 768px) {
+                min-width: 57px;
+            }
         }
 
         .edit-note {
